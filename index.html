@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arc Line Energy - Powering Your Future</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body style="overflow: hidden;">
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Particles Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-logo">ARC<span>LINE</span></div>
+        <div class="preloader-bar"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="./index.html" class="logo">
+                <div class="logo-icon">⚡</div>
+                <div class="logo-text">ARC<span>LINE</span></div>
+            </a>
+            <div class="nav-links">
+                <a href="./index.html" class="active">Home</a>
+                <a href="./services.html">Services</a>
+                <a href="./calculator.html">Calculator</a>
+                <a href="./portfolio.html">Portfolio</a>
+                <a href="./booking.html">Book Now</a>
+                <a href="./contact.html">Contact</a>
+                <a href="./booking.html" class="nav-cta">Get Quote</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+            <div class="hero-grid"></div>
+            <div class="hero-line" style="left: 10%;"></div>
+            <div class="hero-line" style="left: 30%;"></div>
+            <div class="hero-line" style="left: 50%;"></div>
+            <div class="hero-line" style="left: 70%;"></div>
+            <div class="hero-line" style="left: 90%;"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="dot"></span>
+                    Trusted Solar & Electrical Company
+                </div>
+                <h1>Powering Your Future With<br><span class="typing-text">Clean Energy</span></h1>
+                <p>Arc Line Energy provides premium solar installation and electrical services. We bring reliable, sustainable energy solutions to homes and businesses across Pakistan.</p>
+                <div class="hero-buttons">
+                    <a href="./booking.html" class="btn btn-primary">Get Free Quote →</a>
+                    <a href="./services.html" class="btn btn-secondary">Our Services</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-target="500" data-suffix="+">0</span>
+                        <span class="stat-label">Projects Done</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="150" data-suffix="+">0</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="10" data-suffix="+">0</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <div class="hero-card-inner">
+                        <div class="solar-orbit">
+                            <div class="solar-center">☀️</div>
+                            <div class="orbit-ring orbit-ring-1"><div class="orbit-dot"></div></div>
+                            <div class="orbit-ring orbit-ring-2"><div class="orbit-dot"></div></div>
+                            <div class="orbit-ring orbit-ring-3"><div class="orbit-dot"></div></div>
+                        </div>
+                    </div>
+                    <div class="hero-card-content">
+                        <h4>Go Solar Today</h4>
+                        <p>Save up to 70% on your electricity bills with our premium solar solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">What We Do</span>
+                <h2>Our Premium <span>Services</span></h2>
+                <p>We offer comprehensive solar and electrical solutions tailored to your needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon">🌞</div>
+                    <h3>Solar Panel Installation</h3>
+                    <p>Complete solar panel installation for homes and businesses with premium quality panels and 25-year warranty.</p>
+                    <a href="./services.html" class="service-link">Learn More</a>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">⚡</div>
+                    <h3>Electrical Wiring</h3>
+                    <p>Professional electrical wiring and rewiring services for residential and commercial properties.</p>
+                    <a href="./services.html" class="service-link">Learn More</a>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">🔋</div>
+                    <h3>Battery Storage</h3>
+                    <p>Advanced battery storage systems to store excess solar energy for use during nighttime and cloudy days.</p>
+                    <a href="./services.html" class="service-link">Learn More</a>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">🔌</div>
+                    <h3>EV Charging Stations</h3>
+                    <p>Install electric vehicle charging stations at your home or commercial property for convenient charging.</p>
+                    <a href="./services.html" class="service-link">Learn More</a>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">🔧</div>
+                    <h3>Maintenance & Repair</h3>
+                    <p>Regular maintenance and emergency repair services to keep your solar and electrical systems running perfectly.</p>
+                    <a href="./services.html" class="service-link">Learn More</a>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">📊</div>
+                    <h3>Energy Auditing</h3>
+                    <p>Comprehensive energy audit to identify savings opportunities and optimize your energy consumption.</p>
+                    <a href="./services.html" class="service-link">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about">
+        <div class="container">
+            <div class="about-image reveal-left">
+                <div class="about-img-box">
+                    🏢
+                </div>
+                <div class="about-experience">
+                    <span class="number">10+</span>
+                    <span class="text">Years Experience</span>
+                </div>
+            </div>
+            <div class="about-content reveal-right">
+                <span class="section-tag">About Us</span>
+                <h2>Leading The Way In <span>Solar Energy</span></h2>
+                <p>Arc Line Energy has been at the forefront of the solar revolution, providing top-notch solar installation and electrical services. Our team of certified professionals ensures every project is completed to the highest standards.</p>
+                <div class="about-features">
+                    <div class="about-feature">
+                        <div class="about-feature-icon">✓</div>
+                        <span>Certified Engineers</span>
+                    </div>
+                    <div class="about-feature">
+                        <div class="about-feature-icon">✓</div>
+                        <span>Premium Equipment</span>
+                    </div>
+                    <div class="about-feature">
+                        <div class="about-feature-icon">✓</div>
+                        <span>25 Year Warranty</span>
+                    </div>
+                    <div class="about-feature">
+                        <div class="about-feature-icon">✓</div>
+                        <span>24/7 Support</span>
+                    </div>
+                </div>
+                <a href="./contact.html" class="btn btn-primary">Contact Us →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section" id="pricing">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Pricing Plans</span>
+                <h2>Choose Your <span>Solar Plan</span></h2>
+                <p>Affordable solar solutions for every budget and energy need</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card reveal">
+                    <div class="pricing-icon">🏠</div>
+                    <h3>Starter</h3>
+                    <div class="pricing-amount">$2,999<span>/system</span></div>
+                    <p class="pricing-desc">Perfect for small homes</p>
+                    <ul class="pricing-features">
+                        <li>3kW Solar System</li>
+                        <li>10 Solar Panels</li>
+                        <li>Basic Inverter</li>
+                        <li>Professional Installation</li>
+                        <li>5 Year Warranty</li>
+                    </ul>
+                    <a href="./booking.html" class="btn btn-secondary pricing-btn">Get Started</a>
+                </div>
+                <div class="pricing-card featured reveal">
+                    <div class="pricing-icon">🏡</div>
+                    <h3>Professional</h3>
+                    <div class="pricing-amount">$5,999<span>/system</span></div>
+                    <p class="pricing-desc">Best for medium homes</p>
+                    <ul class="pricing-features">
+                        <li>6kW Solar System</li>
+                        <li>18 Solar Panels</li>
+                        <li>Hybrid Inverter</li>
+                        <li>Battery Storage Included</li>
+                        <li>15 Year Warranty</li>
+                    </ul>
+                    <a href="./booking.html" class="btn btn-primary pricing-btn">Get Started</a>
+                </div>
+                <div class="pricing-card reveal">
+                    <div class="pricing-icon">🏢</div>
+                    <h3>Enterprise</h3>
+                    <div class="pricing-amount">$12,999<span>/system</span></div>
+                    <p class="pricing-desc">For large properties</p>
+                    <ul class="pricing-features">
+                        <li>15kW Solar System</li>
+                        <li>40+ Solar Panels</li>
+                        <li>Premium Inverter</li>
+                        <li>Full Battery Backup</li>
+                        <li>25 Year Warranty</li>
+                    </ul>
+                    <a href="./booking.html" class="btn btn-secondary pricing-btn">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Testimonials</span>
+                <h2>What Our <span>Clients Say</span></h2>
+                <p>Don't just take our word for it - hear from our satisfied customers</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Arc Line Energy transformed our home with solar panels. Our electricity bill dropped by 70%! The installation team was professional and completed the work on time."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">AK</div>
+                        <div class="testimonial-info">
+                            <h5>Ahmad Khan</h5>
+                            <p>Homeowner, Lahore</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Excellent electrical services for our office building. The team handled everything from wiring to setting up EV charging stations. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SA</div>
+                        <div class="testimonial-info">
+                            <h5>Sara Ali</h5>
+                            <p>Business Owner, Islamabad</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"We've been using Arc Line Energy for maintenance for 3 years now. Their response time is incredible and the quality of service is consistently excellent."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MR</div>
+                        <div class="testimonial-info">
+                            <h5>Muhammad Raza</h5>
+                            <p>Farm Owner, Multan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content reveal">
+                <h2>Ready to Go Solar?</h2>
+                <p>Get a free consultation and quote for your solar installation project. Start saving money and the planet today!</p>
+                <a href="./booking.html" class="btn btn-primary">Get Free Quote →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="./index.html" class="logo">
+                        <div class="logo-icon">⚡</div>
+                        <div class="logo-text">ARC<span>LINE</span></div>
+                    </a>
+                    <p>Arc Line Energy is a leading provider of solar installation and electrical services, committed to bringing clean, reliable energy to homes and businesses.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">💼</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./services.html">Services</a></li>
+                        <li><a href="./portfolio.html">Portfolio</a></li>
+                        <li><a href="./calculator.html">Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="./services.html">Solar Installation</a></li>
+                        <li><a href="./services.html">Electrical Wiring</a></li>
+                        <li><a href="./services.html">Battery Storage</a></li>
+                        <li><a href="./services.html">EV Charging</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>📍 123 Energy Street, Lahore</li>
+                        <li>📞 +92 300 1234567</li>
+                        <li>✉️ info@arclineenergy.com</li>
+                        <li>🕐 Mon-Sat: 9AM - 6PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Arc Line Energy. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top">↑</button>
+    <script src="./js/main.js"></script>
+</body>
+</html>

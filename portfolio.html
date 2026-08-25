@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Arc Line Energy</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="./index.html" class="logo">
+                <div class="logo-icon">⚡</div>
+                <div class="logo-text">ARC<span>LINE</span></div>
+            </a>
+            <div class="nav-links">
+                <a href="./index.html">Home</a>
+                <a href="./services.html">Services</a>
+                <a href="./calculator.html">Calculator</a>
+                <a href="./portfolio.html" class="active">Portfolio</a>
+                <a href="./booking.html">Book Now</a>
+                <a href="./contact.html">Contact</a>
+                <a href="./booking.html" class="nav-cta">Get Quote</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="min-height: 50vh;">
+        <div class="hero-bg">
+            <div class="hero-grid"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content" style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <span class="section-tag">Our Work</span>
+                <h1>Project <span>Portfolio</span></h1>
+                <p>Take a look at our completed solar and electrical projects across the country.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section">
+        <div class="container">
+            <!-- Filter Buttons -->
+            <div class="portfolio-filter reveal">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="solar">Solar</button>
+                <button class="filter-btn" data-filter="electrical">Electrical</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid">
+                <div class="portfolio-card reveal" data-category="solar">
+                    <div class="portfolio-img">🌞</div>
+                    <div class="portfolio-overlay">
+                        <span class="tag">Solar</span>
+                        <h4>10kW Home System</h4>
+                        <p>Lahore - Residential rooftop installation</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card reveal" data-category="electrical">
+                    <div class="portfolio-img">⚡</div>
+                    <div class="portfolio-overlay">
+                        <span class="tag">Electrical</span>
+                        <h4>Office Building Wiring</h4>
+                        <p>Islamabad - Complete electrical rewiring</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card reveal" data-category="commercial">
+                    <div class="portfolio-img">🏭</div>
+                    <div class="portfolio-overlay">
+                        <span class="tag">Commercial</span>
+                        <h4>50kW Factory System</h4>
+                        <p>Faisalabad - Industrial solar installation</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card reveal" data-category="solar">
+                    <div class="portfolio-img">☀️</div>
+                    <div class="portfolio-overlay">
+                        <span class="tag">Solar</span>
+                        <h4>5kW Villa System</h4>
+                        <p>Karachi - Premium home installation</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card reveal" data-category="commercial">
+                    <div class="portfolio-img">🏪</div>
+                    <div class="portfolio-overlay">
+                        <span class="tag">Commercial</span>
+                        <h4>Mall Solar Project</h4>
+                        <p>Multan - 100kW commercial installation</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card reveal" data-category="electrical">
+                    <div class="portfolio-img">🔌</div>
+                    <div class="portfolio-overlay">
+                        <span class="tag">Electrical</span>
+                        <h4>EV Charging Hub</h4>
+                        <p>Peshawar - 10-station charging facility</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card reveal" data-category="solar">
+                    <div class="portfolio-img">🔋</div>
+                    <div class="portfolio-overlay">
+                        <span class="tag">Solar + Storage</span>
+                        <h4>8kW + Battery System</h4>
+                        <p>Gujranwala - Solar with backup storage</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card reveal" data-category="commercial">
+                    <div class="portfolio-img">🏨</div>
+                    <div class="portfolio-overlay">
+                        <span class="tag">Commercial</span>
+                        <h4>Hotel Solar Array</h4>
+                        <p>Murree - 200kW rooftop solar farm</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card reveal" data-category="electrical">
+                    <div class="portfolio-img">🏗️</div>
+                    <div class="portfolio-overlay">
+                        <span class="tag">Electrical</span>
+                        <h4>Hospital Power System</h4>
+                        <p>Lahore - Critical power infrastructure</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section" style="background: var(--primary-light);">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Our Impact</span>
+                <h2>Project <span>Statistics</span></h2>
+            </div>
+            <div class="services-grid" style="grid-template-columns: repeat(4, 1fr);">
+                <div class="service-card reveal" style="text-align: center;">
+                    <div class="service-icon" style="margin: 0 auto 20px;">📊</div>
+                    <h3 style="font-size: 36px; color: var(--accent);">500+</h3>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="service-card reveal" style="text-align: center;">
+                    <div class="service-icon" style="margin: 0 auto 20px;">⚡</div>
+                    <h3 style="font-size: 36px; color: var(--accent);">15MW</h3>
+                    <p>Total Capacity Installed</p>
+                </div>
+                <div class="service-card reveal" style="text-align: center;">
+                    <div class="service-icon" style="margin: 0 auto 20px;">🌍</div>
+                    <h3 style="font-size: 36px; color: var(--accent);">2,500</h3>
+                    <p>Tons CO2 Reduced/Year</p>
+                </div>
+                <div class="service-card reveal" style="text-align: center;">
+                    <div class="service-icon" style="margin: 0 auto 20px;">😊</div>
+                    <h3 style="font-size: 36px; color: var(--accent);">150+</h3>
+                    <p>Happy Clients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content reveal">
+                <h2>Want a Similar Project?</h2>
+                <p>Get in touch with us to discuss your project requirements. We'll design a custom solution for your needs.</p>
+                <a href="./booking.html" class="btn btn-primary">Start Your Project →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="./index.html" class="logo">
+                        <div class="logo-icon">⚡</div>
+                        <div class="logo-text">ARC<span>LINE</span></div>
+                    </a>
+                    <p>Arc Line Energy is a leading provider of solar installation and electrical services, committed to bringing clean, reliable energy to homes and businesses.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">💼</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./services.html">Services</a></li>
+                        <li><a href="./portfolio.html">Portfolio</a></li>
+                        <li><a href="./calculator.html">Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="./services.html">Solar Installation</a></li>
+                        <li><a href="./services.html">Electrical Wiring</a></li>
+                        <li><a href="./services.html">Battery Storage</a></li>
+                        <li><a href="./services.html">EV Charging</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>📍 123 Energy Street, Lahore</li>
+                        <li>📞 +92 300 1234567</li>
+                        <li>✉️ info@arclineenergy.com</li>
+                        <li>🕐 Mon-Sat: 9AM - 6PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Arc Line Energy. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top">↑</button>
+    <script src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Calculator - Arc Line Energy</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="./index.html" class="logo">
+                <div class="logo-icon">⚡</div>
+                <div class="logo-text">ARC<span>LINE</span></div>
+            </a>
+            <div class="nav-links">
+                <a href="./index.html">Home</a>
+                <a href="./services.html">Services</a>
+                <a href="./calculator.html" class="active">Calculator</a>
+                <a href="./portfolio.html">Portfolio</a>
+                <a href="./booking.html">Book Now</a>
+                <a href="./contact.html">Contact</a>
+                <a href="./booking.html" class="nav-cta">Get Quote</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="min-height: 50vh;">
+        <div class="hero-bg">
+            <div class="hero-grid"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content" style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <span class="section-tag">Solar Savings</span>
+                <h1>Calculate Your <span>Solar Savings</span></h1>
+                <p>Find out how much you can save by switching to solar energy. Enter your details below for a personalized estimate.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator-section">
+        <div class="container">
+            <div class="calculator-box reveal">
+                <div class="calc-grid">
+                    <div class="calc-inputs">
+                        <h3 style="font-size: 22px; margin-bottom: 30px;">📊 Enter Your Details</h3>
+
+                        <div class="calc-input-group">
+                            <label>Monthly Electricity Bill (PKR)</label>
+                            <input type="number" id="monthlyBill" placeholder="e.g. 15000" value="15000">
+                        </div>
+
+                        <div class="calc-input-group">
+                            <label>Area of Roof (sq. ft.)</label>
+                            <input type="number" id="roofArea" placeholder="e.g. 1000" value="1000">
+                        </div>
+
+                        <div class="calc-input-group">
+                            <label>Sunlight Hours Per Day</label>
+                            <select id="sunHours">
+                                <option value="4">4 Hours (Cloudy Area)</option>
+                                <option value="5">5 Hours (Average)</option>
+                                <option value="6" selected>6 Hours (Good)</option>
+                                <option value="7">7 Hours (Excellent)</option>
+                                <option value="8">8 Hours (Premium)</option>
+                            </select>
+                        </div>
+
+                        <div class="calc-input-group">
+                            <label>Electricity Tariff Rate (PKR/kWh)</label>
+                            <input type="number" id="tariffRate" placeholder="e.g. 35" value="35" step="0.5">
+                        </div>
+
+                        <div class="calc-input-group">
+                            <label>Property Type</label>
+                            <select id="propertyType">
+                                <option value="residential">Residential Home</option>
+                                <option value="commercial">Commercial Building</option>
+                                <option value="industrial">Industrial Facility</option>
+                            </select>
+                        </div>
+
+                        <button class="btn btn-primary calc-btn" onclick="calculateSolar()">
+                            Calculate Savings ⚡
+                        </button>
+                    </div>
+
+                    <div class="calc-result">
+                        <h3>💰 Your Savings Estimate</h3>
+
+                        <div class="result-item">
+                            <span class="result-label">Recommended System Size</span>
+                            <span class="result-value" id="systemSize">-</span>
+                        </div>
+
+                        <div class="result-item">
+                            <span class="result-label">Number of Panels</span>
+                            <span class="result-value" id="panelCount">-</span>
+                        </div>
+
+                        <div class="result-item">
+                            <span class="result-label">Monthly Savings</span>
+                            <span class="result-value" id="monthlySavings">-</span>
+                        </div>
+
+                        <div class="result-item">
+                            <span class="result-label">Annual Savings</span>
+                            <span class="result-value" id="annualSavings">-</span>
+                        </div>
+
+                        <div class="result-item">
+                            <span class="result-label">25-Year Savings</span>
+                            <span class="result-value" id="totalSavings">-</span>
+                        </div>
+
+                        <div class="result-item">
+                            <span class="result-label">Estimated System Cost</span>
+                            <span class="result-value" id="systemCost">-</span>
+                        </div>
+
+                        <div class="result-item">
+                            <span class="result-label">Payback Period</span>
+                            <span class="result-value" id="paybackPeriod">-</span>
+                        </div>
+
+                        <div class="result-item">
+                            <span class="result-label">CO2 Reduction (Annual)</span>
+                            <span class="result-value" id="co2Reduction">-</span>
+                        </div>
+
+                        <a href="./booking.html" class="btn btn-primary" style="width: 100%; margin-top: 25px;">
+                            Get Exact Quote →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Why Solar?</span>
+                <h2>Benefits of <span>Solar Energy</span></h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon">💰</div>
+                    <h3>Save Money</h3>
+                    <p>Reduce your electricity bills by up to 70-90% with solar energy. Most systems pay for themselves within 3-5 years.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">🌍</div>
+                    <h3>Go Green</h3>
+                    <p>Reduce your carbon footprint and contribute to a cleaner environment. Solar energy produces zero emissions.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">📈</div>
+                    <h3>Increase Property Value</h3>
+                    <p>Homes with solar installations typically sell for 4-6% more than comparable homes without solar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="./index.html" class="logo">
+                        <div class="logo-icon">⚡</div>
+                        <div class="logo-text">ARC<span>LINE</span></div>
+                    </a>
+                    <p>Arc Line Energy is a leading provider of solar installation and electrical services, committed to bringing clean, reliable energy to homes and businesses.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">💼</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./services.html">Services</a></li>
+                        <li><a href="./portfolio.html">Portfolio</a></li>
+                        <li><a href="./calculator.html">Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="./services.html">Solar Installation</a></li>
+                        <li><a href="./services.html">Electrical Wiring</a></li>
+                        <li><a href="./services.html">Battery Storage</a></li>
+                        <li><a href="./services.html">EV Charging</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>📍 123 Energy Street, Lahore</li>
+                        <li>📞 +92 300 1234567</li>
+                        <li>✉️ info@arclineenergy.com</li>
+                        <li>🕐 Mon-Sat: 9AM - 6PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Arc Line Energy. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top">↑</button>
+    <script src="./js/main.js"></script>
+    <script src="./js/calculator.js"></script>
+</body>
+</html>
