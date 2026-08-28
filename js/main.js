@@ -351,4 +351,73 @@ window.addEventListener('scroll', () => {
     });
 });
 
+// ==================== SMOOTH SCROLLING ====================
+// Enhanced smooth scrolling with easing
+(function() {
+    document.documentElement.style.scrollBehavior = 'smooth';
+    
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href*="#"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const targetId = link.getAttribute('href');
+            if (targetId && targetId.startsWith('#') && targetId.length > 1) {
+                const target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
+
+    // Lenis-like lerp smooth scroll (no external library needed)
+    let targetScroll = window.scrollY;
+    let currentScroll = window.scrollY;
+    let isScrolling = false;
+
+    const lerpScroll = () => {
+        currentScroll += (targetScroll - currentScroll) * 0.08;
+        if (Math.abs(targetScroll - currentScroll) > 0.5) {
+            window.scrollTo(0, currentScroll);
+            requestAnimationFrame(lerpScroll);
+        } else {
+            window.scrollTo(0, targetScroll);
+            isScrolling = false;
+        }
+    };
+
+    // Intercept wheel events for smooth scrolling
+    let isWheelLocked = false;
+    window.addEventListener('wheel', (e) => {
+        if (isWheelLocked) return;
+        isWheelLocked = true;
+        targetScroll += e.deltaY;
+        targetScroll = Math.max(0, Math.min(targetScroll, document.body.scrollHeight - window.innerHeight));
+        if (!isScrolling) {
+            isScrolling = true;
+            requestAnimationFrame(lerpScroll);
+        }
+        setTimeout(() => { isWheelLocked = false; }, 80);
+    }, { passive: true });
+
+    // Smooth scroll for back-to-top button
+    const backToTop = document.querySelector('.back-to-top');
+    if (backToTop) {
+        backToTop.addEventListener('click', (e) => {
+            e.preventDefault();
+            targetScroll = 0;
+            if (!isScrolling) {
+                isScrolling = true;
+                requestAnimationFrame(lerpScroll);
+            }
+        });
+    }
+})();
+
 console.log('%c⚡ Arc Line Energy ', 'background: linear-gradient(135deg, #ff6d00, #ff9e40); color: white; font-size: 24px; padding: 12px 24px; border-radius: 8px; font-weight: bold; font-family: Orbitron, sans-serif;');
